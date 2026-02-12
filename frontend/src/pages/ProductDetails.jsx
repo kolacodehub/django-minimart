@@ -63,6 +63,8 @@ const ProductDetail = () => {
         },
       });
     } catch (err) {
+      console.log(err);
+      
       dispatch({ type: "STOP_LOADING" });
     }
   };
@@ -101,6 +103,8 @@ const ProductDetail = () => {
       console.error("Failed to add to cart:", err);
       const errorMessage =
         err.response?.data?.error || "Failed to add to cart.";
+      console.log(errorMessage);
+      
     }
   };
 
@@ -140,7 +144,7 @@ const ProductDetail = () => {
 
   return (
     <>
-      <div className="py-5 vh-100">
+      <div className="py-5 min-vh-100">
         <div className="container">
           <nav aria-label="breadcrumb" className="mb-4">
             <ol className="breadcrumb">

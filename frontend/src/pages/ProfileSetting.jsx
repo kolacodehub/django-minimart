@@ -27,6 +27,8 @@ const ProfileSettings = () => {
         setTimeout(() => setAlerts(null), 3000);
       }
     } catch (error) {
+      console.log(error);
+      
       setAlerts({
         type: "danger",
         message: "Failed to update profile",
